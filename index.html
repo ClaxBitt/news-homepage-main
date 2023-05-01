@@ -37,16 +37,24 @@
       }
     </style>
   </head>
-  <body>
+  <body class="menu-active">
     <div id="navbar">
       <div class="navbar">
         <img src="./assets/images/logo.svg" alt="Logo News" class="logo" />
 
-        <div class="menu d-none">
+        <img
+          src="./assets/images/icon-menu.svg"
+          alt="Icon Menu"
+          class="navbar__icon-menu"
+          id="icon-menu"
+        />
+
+        <div class="menu d-none" id="menu">
           <img
             src="./assets/images/icon-menu-close.svg"
             alt="Icon close"
-            class="menu__close"
+            class="menu__icon-close"
+            id="icon-menu-close"
           />
 
           <nav class="navigation">
@@ -57,14 +65,10 @@
             <a href="#" class="navigation__item">Categories</a>
           </nav>
         </div>
-
-        <img
-          src="./assets/images/icon-menu.svg"
-          alt="Icon Menu"
-          class="icon-menu"
-        />
       </div>
     </div>
+
+    <div class="overlay d-none" id="overlay"></div>
 
     <main>
       <header class="main-new">
@@ -155,6 +159,9 @@
         </article>
       </section>
     </main>
+
+    <!-- Scripts -->
+    <script src="./js/behavior.js"></script>
 
     <!-- Attribution -->
     <div class="attribution">
