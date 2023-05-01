@@ -1,0 +1,215 @@
+:root {
+  /* **** Colors **** */
+
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+
+  --off-white: hsl(36, 100%, 99%);
+  --grayish-blue: hsl(233, 8%, 79%);
+  --dark-grayish-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  /* **** Font **** */
+
+  --family-inter: "Inter", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: var(--family-inter);
+  padding: 4%;
+}
+
+/*
+  El ancho de las imágenes no pasará de más allá de su
+  contenedor padre.
+
+  Darle un color y un interlineado a todos los párrafos
+  de la página.
+
+  Quitarle el borde por defecto, darles un
+  padding, un espaciado entre letras, modificar tamaño
+  de letras, anchura y forma del texto  a todos los
+  botones.
+*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+
+button {
+  border: none;
+  padding: 13px 30px;
+  letter-spacing: 4.5px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ======= Navbar ======= */
+
+/*
+  Separar y dejar un espacio en medio de los elementos
+  del navbar.
+  Alinearlos verticalmente.
+  Darle un padding al elemento padre y un margin-bottom.
+
+  Darle un tamaño apropiado al logo.
+*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 0;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.d-none {
+  display: none;
+}
+
+/* ======= Layout ======= */
+
+/* ======= Main New ======= */
+
+/*
+  Aumentar tamaño del título de la noticia principal,
+  anchura y darle un margin superior y inferior.
+
+  Darle un margin-bottom al párrafo.
+
+  Darle un color de fondo y color de letra al boton
+  de la noticia principal.
+*/
+.main-new h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.main-new p {
+  margin-bottom: 20px;
+}
+
+.main-new button {
+  background-color: var(--soft-red);
+  color: var(--off-white);
+}
+
+/* ======= Aside News ======= */
+
+/*
+  Separar la sección desde la parte de arriba con margin,
+  darle un color de fondo y un padding.
+
+  Al título de la sección cambiarlo de color y de tamaño.
+
+  A cada noticia darle un padding-bottom con un
+  border-bottom y separarlos desde arriba.
+
+  A la última noticia no darle borde ni padding.
+
+  Al título de cada noticia darle un color y un 
+  margin-bottom.
+
+  Cambiarle el color a los párrafos.
+*/
+.newsbar {
+  margin-top: 40px;
+  background-color: var(--very-dark-blue);
+  padding: 5%;
+}
+
+.newsbar h2 {
+  color: var(--soft-orange);
+  font-size: 28px;
+}
+
+.newsbar__new {
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--dark-grayish-blue);
+  margin-top: 30px;
+}
+
+.newsbar__new:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.newsbar__new h3 {
+  color: var(--off-white);
+  margin-bottom: 7px;
+}
+
+.newsbar__new h3:hover {
+  color: var(--soft-orange);
+}
+
+.newsbar__new p {
+  color: var(--grayish-blue);
+}
+
+/* ======= Secondary News ======= */
+
+/*
+  Márgenes arriba y abajo a la sección.
+
+  Flexbox a cada noticia, margin-bottom.
+
+  Ancho y alto proporcional de la imagen.
+
+  Aumentar tamaño del número de cada noticia, grosor
+  y color.
+
+  A la parte del texto cambiar dirección de alineado
+  y usar space-between.
+*/
+.secondary-news {
+  margin: 60px 0;
+}
+
+.secondary-news__new {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.secondary-news__new img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+.new__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new__id {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--grayish-blue);
+}
+
+.new__information:hover {
+  color: var(--soft-red);
+}
