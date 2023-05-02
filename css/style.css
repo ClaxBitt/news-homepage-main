@@ -142,6 +142,72 @@ button {
 
 /* ======= Layout ======= */
 
+/*
+  -------- Móviles
+*/
+main {
+  display: grid;
+  grid-template-areas:
+    "main-news"
+    "secondary-news";
+}
+
+.main-news {
+  grid-area: main-news;
+}
+
+.secondary-news {
+  grid-area: secondary-news;
+}
+
+/*
+  -------- Tablets
+*/
+@media screen and (min-width: 680px) and (max-width: 900px) {
+  .main-news {
+    display: grid;
+    grid-template-areas:
+      "image image "
+      "info aside";
+    gap: 20px;
+  }
+
+  .main-news img {
+    grid-area: image;
+  }
+
+  .main-new__info {
+    grid-area: info;
+  }
+
+  .newsbar {
+    grid-area: aside;
+  }
+}
+
+/* -------- Desktop */
+@media (min-width: 900px) {
+  .main-news {
+    display: grid;
+    grid-template-areas:
+      "image image aside"
+      "info info aside";
+    gap: 20px;
+  }
+
+  .main-news img {
+    grid-area: image;
+  }
+
+  .main-new__info {
+    grid-area: info;
+  }
+
+  .newsbar {
+    grid-area: aside;
+  }
+}
+
 /* ======= Main New ======= */
 
 /*
@@ -153,22 +219,28 @@ button {
   Darle un color de fondo y color de letra al boton
   de la noticia principal.
 */
-.main-new h1 {
+@media (min-width: 480px) {
+  .main-news img {
+    content: url("../assets/images/image-web-3-desktop.jpg");
+  }
+}
+
+.main-news h1 {
   font-size: 42px;
   font-weight: 800;
   margin: 20px 0;
 }
 
-.main-new p {
+.main-news p {
   margin-bottom: 20px;
 }
 
-.main-new button {
+.main-news button {
   background-color: var(--soft-red);
   color: var(--off-white);
 }
 
-.main-new button:hover {
+.main-news button:hover {
   background-color: var(--very-dark-blue);
 }
 
@@ -196,6 +268,17 @@ button {
   padding: 5%;
 }
 
+@media (min-width: 680px) {
+  .newsbar {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .newsbar {
+    margin-top: 0;
+  }
+}
+
 .newsbar h2 {
   color: var(--soft-orange);
   font-size: 28px;
@@ -208,8 +291,8 @@ button {
 }
 
 .newsbar__new:last-of-type {
-  border-bottom: none;
-  padding-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0px;
 }
 
 .newsbar__new h3 {
